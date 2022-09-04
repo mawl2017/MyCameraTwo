@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+<!--    相机框-->
+    <RelativeLayout
+        android:id="@+id/rl_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        >
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/rl_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:textSize="12sp"
+            android:textColor="#80ffffff"
+            android:layout_height="wrap_content"
+            android:text="请尽可能将小票摊平，并完整对准上方取景框"></TextView>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/photo_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="取消"
+                android:layout_toLeftOf="@+id/img_take_photo"
+                android:textSize="16sp"
+                android:textColor="@color/white"></TextView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/img_take_photo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/image_take_photo"/>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/img_take_rotate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/img_take_photo"
+                android:src="@mipmap/image_take_rotate"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_take_light"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:src="@mipmap/image_close_light"></ImageView>
+
+        <TextView
+            android:id="@+id/photo_wide"
+            android:textColor="@color/white"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="宽"
+            android:background="@drawable/bg_rect_theme_30dp_gray"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"></TextView>
+        <TextView
+            android:id="@+id/photo_short"
+            android:textColor="@color/white"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="短"
+            android:background="@drawable/bg_rect_theme_30dp_gray"
+            android:layout_toLeftOf="@+id/photo_wide"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginRight="25dp"></TextView>
+
+        <TextView
+            android:id="@+id/photo_long"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:layout_toLeftOf="@+id/photo_short"
+            android:background="@drawable/bg_rect_theme_30dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="长"
+            android:textColor="@color/white"
+            android:textSize="16sp"></TextView>
+
+    </RelativeLayout>
+
+
+
+    <Button
+        android:id="@+id/savePicture"
+        android:layout_width="1dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text="保存" />
+</RelativeLayout>

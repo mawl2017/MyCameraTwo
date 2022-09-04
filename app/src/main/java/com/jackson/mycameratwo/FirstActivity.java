@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,6 +31,8 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
 
         ImageView iv_pic=findViewById(R.id.iv_pic);
+
+        Log.d("mawl","测试学习 git分支");
 
         iv_pic.setOnClickListener(new View.OnClickListener() {
             @Override

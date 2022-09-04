@@ -171,7 +171,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setTextureView_Size(mWidth/2,mHeight/4);
 
 
+        Log.d("mawl","测试git12");
+
         textureView.setSurfaceTextureListener(textureListener);
+
+        Log.d("mawl","测试git123");
+        Log.d("mawl","测试git123");
+        Log.d("mawl","测试git123");
 
     }
 

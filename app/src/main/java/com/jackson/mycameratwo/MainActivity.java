@@ -177,6 +177,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Log.d("mawl","测试git123");
         Log.d("mawl","测试git123");
+
+        Log.d("mawl","测试git123");
         Log.d("mawl","测试git123");
 
     }
